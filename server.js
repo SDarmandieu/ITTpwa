@@ -29,8 +29,7 @@ app.post('/result', (req, res, next) => {
 	res.render('result',{jours:jours})
 });
 
-const PORT = process.env.PORT || 8080; 
 
-app.listen(PORT , function(req,res){
+let server = app.listen(process.env.PORT || 8080 , function(req,res){
 	console.log('Connecté');
 });

@@ -1,0 +1,74 @@
+<%- include partials/header.ejs %>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">ITT 2018</a>
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="/">Accueil</a>
+				</li>
+			</ul>
+	</nav>
+
+	<div class="container text-center mt-3">
+		<form action="/result" method="POST">
+			<div class="form-group">
+				<label for="majeur">Lésion majeure</label>
+				<select class="form-control" id="majeur" name="majeur">
+					<option value="1">Abrasion</option>
+					<option value="1">Brulûre 1er degré</option>
+					<option value="2">Ecchymose</option>
+					<option value="2">Raideur</option>
+					<option value="3">Hématome</option>
+					<option value="3">Plaie</option>
+					<option value="4">Brulûre &gt; 1er degré</option>
+					<option value="5">Entorse</option>
+					<option value="6">Luxation</option>
+					<option value="7">Fracture</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label for="nombre">Nombre de lésions</label>
+				<select class="form-control" id="nombre" name="nombre">
+					<option value="0">1</option>
+					<option value="1">2 à 5</option>
+					<option value="2">6 à 10</option>
+					<option value="3">&gt; 10</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label for="taille">Taille maximale des lésions</label>
+				<select class="form-control" id="taille" name="taille">
+					<option value="0">&lt; 1cm</option>
+					<option value="1">1 à 5cm</option>
+					<option value="2">6 à 10cm</option>
+					<option value="3">&gt; 10cm</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label for="gene">Gêne fonctionnelle</label>
+				<select class="form-control" id="gene" name="gene">
+					<option value="0">Gêne nulle</option>
+					<option value="1">Gêne discrête</option>
+					<option value="2">Gêne modérée</option>
+					<option value="3">Gêne sévère</option>
+				</select>
+			</div>
+
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" id="dominant" name="dominant" value="checked">
+				<label class="form-check-label" for="dominant">
+					La gêne fonctionnelle touche un membre dominant
+				</label>
+			</div>
+
+			<button type="submit" class="btn btn-primary mt-3 btn-lg btn-dark mb-4">Valider</button>
+		</form>
+	</div>
+
+</body>
+
+<%- include partials/footer.ejs %>
